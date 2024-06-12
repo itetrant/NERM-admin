@@ -26,12 +26,13 @@ const MainLayout = () => {
   } = theme.useToken();
   const navigate = useNavigate();
   return (
+    
     <Layout /* onContextMenu={(e) => e.preventDefault()} */>
       <Sider trigger={null} collapsible collapsed={collapsed}>
         <div className="logo">
           <h2 className="text-white fs-5 text-center py-3 mb-0">
-            <span className="sm-logo">DC</span>
-            <span className="lg-logo">Dev Corner</span>
+            <span className="sm-logo">CMS</span>
+            <span className="lg-logo">ECOM CMS</span>
           </h2>
         </div>
         <Menu
@@ -39,7 +40,7 @@ const MainLayout = () => {
           mode="inline"
           defaultSelectedKeys={[""]}
           onClick={({ key }) => {
-            if (key == "signout") {
+            if (key === "signout") {
             } else {
               navigate(key);
             }
@@ -177,9 +178,9 @@ const MainLayout = () => {
           <div className="d-flex gap-4 align-items-center">
             <div className="position-relative">
               <IoIosNotifications className="fs-4" />
-              <span className="badge bg-warning rounded-circle p-1 position-absolute">
+              {/* <span className="badge bg-warning rounded-circle p-1 position-absolute">
                 3
-              </span>
+              </span> */}
             </div>
 
             <div className="d-flex gap-3 align-items-center dropdown">
@@ -187,7 +188,7 @@ const MainLayout = () => {
                 <img
                   width={32}
                   height={32}
-                  src="https://stroyka-admin.html.themeforest.scompiler.ru/variants/ltr/images/customers/customer-4-64x64.jpg"
+                  src="https://tra.name.vn/logo.svg"
                   alt=""
                 />
               </div>
@@ -197,8 +198,8 @@ const MainLayout = () => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                <h5 className="mb-0">Navdeep</h5>
-                <p className="mb-0">navdeepdahiya753@gmail.com</p>
+                <h5 className="mb-0">Tra</h5>
+                <p className="mb-0">ite.trant@gmail.com</p>
               </div>
               <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
                 <li>
