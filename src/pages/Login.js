@@ -36,7 +36,7 @@ const Login = () => {
     } else {
       navigate("");
     }
-  }, [user, isError, isSuccess, isLoading]);
+  }, [user, isError, isSuccess, isLoading, navigate]);
   return (
     <div className="py-5" style={{ background: "#212529", minHeight: "100vh" }}>
       <br />
@@ -48,7 +48,7 @@ const Login = () => {
         <h3 className="text-center title">Login</h3>
         <p className="text-center">Login to your account to continue.</p>
         <div className="error text-center">
-          {message.message == "Rejected" ? "You are not an Admin" : ""}
+          {message.message === "Rejected" ? "You are not an Admin" : ""}
         </div>
         <form action="" onSubmit={formik.handleSubmit}>
           <CustomInput
@@ -82,7 +82,7 @@ const Login = () => {
           </div>
           <button
             className="border-0 px-3 py-2 text-white fw-bold w-100 text-center text-decoration-none fs-5"
-            style={{ background: "#ffd333" }}
+            style={{ background: "#212529" }}
             type="submit"
           >
             Login

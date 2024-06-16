@@ -18,7 +18,7 @@ const ViewEnq = () => {
 
   useEffect(() => {
     dispatch(getAEnquiry(getEnqId));
-  }, [getEnqId]);
+  }, [dispatch, getEnqId]); // add [dispatch,
   const goBack = () => {
     navigate(-1);
   };

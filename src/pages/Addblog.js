@@ -53,7 +53,7 @@ const Addblog = () => {
   useEffect(() => {
     dispatch(resetState());
     dispatch(getCategories());
-  }, []);
+  }, [dispatch]);
 
   useEffect(() => {
     if (isSuccess && createdBlog) {

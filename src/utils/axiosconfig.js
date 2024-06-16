@@ -8,5 +8,7 @@ export const config = {
       getTokenFromLocalStorage !== null ? getTokenFromLocalStorage.token : ""
     }`,
     Accept: "application/json",
+    'Cache-Control': 'no-cache',
+    'Pragma': 'no-cache',
   },
 };

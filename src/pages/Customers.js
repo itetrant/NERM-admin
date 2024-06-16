@@ -26,18 +26,19 @@ const Customers = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getUsers());
-  }, []);
+  }, [dispatch]);
   const customerstate = useSelector((state) => state.customer.customers);
   const data1 = [];
   for (let i = 0; i < customerstate.length; i++) {
-    if (customerstate[i].role !== "admin") {
+    //NTT: show all users
+    //if (customerstate[i].role !== "admin") {
       data1.push({
         key: i + 1,
         name: customerstate[i].firstname + " " + customerstate[i].lastname,
         email: customerstate[i].email,
         mobile: customerstate[i].mobile,
       });
-    }
+    //}
   }
 
   return (

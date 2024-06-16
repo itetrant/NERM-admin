@@ -34,7 +34,7 @@ const Addcat = () => {
     } else {
       dispatch(resetState());
     }
-  }, [getPCatId]);
+  }, [dispatch, getPCatId]);
   useEffect(() => {
     if (isSuccess && createdCategory) {
       toast.success("Category Added Successfullly!");

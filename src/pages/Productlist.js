@@ -44,7 +44,7 @@ const Productlist = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getProducts());
-  }, []);
+  }, [dispatch]); //add [dispatch]
   const productState = useSelector((state) => state.product.products);
   const data1 = [];
   for (let i = 0; i < productState.length; i++) {
@@ -57,9 +57,11 @@ const Productlist = () => {
       price: `${productState[i].price}`,
       action: (
         <>
+        {/*TO-DO*/}
           <Link to="/" className=" fs-3 text-danger">
             <BiEdit />
           </Link>
+          {/*TO-DO*/}
           <Link className="ms-3 fs-3 text-danger" to="/">
             <AiFillDelete />
           </Link>
